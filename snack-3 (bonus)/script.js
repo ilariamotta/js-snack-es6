@@ -3,7 +3,7 @@
 
 //1. creo un array di partenza
 //2. creo una funzione che scorre i numeri all'interno dell'array e identifica i numeri che hanno un indice compreso tra due numeri
-    //POI li inserisco in un nuovo array
+//POI li inserisco in un nuovo array
 //3.evoco la funzione che stamperà l'array nuovo
 
 //1. creo un array di partenza
@@ -15,19 +15,18 @@ let arrayNumeri = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
 
 
-function nuovoArray (array, a, b) {
+function nuovoArray(array, a, b) {
     let arrayAggiornato = [];
-    for (let i = 0; i < array.length; i++)  {
-        let curNumero = array[i];
-        if (i >= a && i <= b) {
-            arrayAggiornato.push(curNumero);
-        }
+    for (let i = a; i <= b; i++) {
+        arrayAggiornato.push(array[i]);
     }
-return arrayAggiornato;
+
+    return arrayAggiornato;
 }
 
 
 //3. invoco la funzione
 
-let risultato = nuovoArray(arrayNumeri, 5, 6);
+let risultato = nuovoArray(arrayNumeri, 2, 6);
 console.log(risultato);
+
