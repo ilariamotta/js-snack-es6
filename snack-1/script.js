@@ -9,14 +9,28 @@
 
 //1. ARRAY DI OGGETTI
 const biciDaCorsa = [
-  { nome: "Pinarello Dogma F", peso: 6.8 },
-  { nome: "Specialized Tarmac SL8", peso: 6.7 },
+  
   { nome: "Canyon Aeroad CF SLX", peso: 7.2 },
+  { nome: "Specialized Tarmac SL8", peso: 6.7 },
   { nome: "Trek Émonda SLR", peso: 6.9 },
   { nome: "Giant Propel Advanced", peso: 7.4 },
   { nome: "Bianchi Oltre RC", peso: 7.1 },
   { nome: "Cervélo R5", peso: 6.8 },
+  { nome: "Pinarello Dogma F", peso: 6.8 },
   { nome: "Scott Addict RC", peso: 7.0 }
 ];
 
 //2. CICLO FOR
+
+let biciLeggera = biciDaCorsa[0];
+
+for (let i = 1; i < biciDaCorsa.length; i++) {
+    const curBici = biciDaCorsa[i];
+    if (curBici.peso < biciLeggera.peso) {
+    biciLeggera = curBici;
+    }
+
+}
+    
+//3. OUTPUT
+console.log(biciLeggera);
