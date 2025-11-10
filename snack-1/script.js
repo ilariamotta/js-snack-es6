@@ -23,6 +23,7 @@ const biciDaCorsa = [
 //2. CICLO FOR
 
 let biciLeggera = biciDaCorsa[0];
+let result;
 
 for (let i = 1; i < biciDaCorsa.length; i++) {
     const curBici = biciDaCorsa[i];
@@ -34,3 +35,4 @@ for (let i = 1; i < biciDaCorsa.length; i++) {
     
 //3. OUTPUT
 console.log(biciLeggera);
+console.log(`La bici più leggera è la ${biciLeggera.nome} con un peso di ${biciLeggera.peso} kg`);
