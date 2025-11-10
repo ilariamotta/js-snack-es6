@@ -14,28 +14,28 @@
 //1. creo array di oggetti di squadre di calcio
 
 const squadreCalcio = [
-  { nome: "Milan", puntiFatti: 0, falliSubiti: 0 },
-  { nome: "Inter", puntiFatti: 0, falliSubiti: 0 },
-  { nome: "Juventus", puntiFatti: 0, falliSubiti: 0 },
-  { nome: "Roma", puntiFatti: 0, falliSubiti: 0 },
-  { nome: "Lazio", puntiFatti: 0, falliSubiti: 0 },
-  { nome: "Fiorentina", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Milan", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Inter", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Juventus", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Roma", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Lazio", puntiFatti: 0, falliSubiti: 0 },
+    { nome: "Fiorentina", puntiFatti: 0, falliSubiti: 0 },
 ];
 
 //2. CICLO FOR
 
 let squadreNuove = [];
- 
+
 for (let i = 0; i < squadreCalcio.length; i++) {
     const curSquadra = squadreCalcio[i];
     curSquadra.puntiFatti = Math.floor(Math.random() * 100) + 1;
     curSquadra.falliSubiti = Math.floor(Math.random() * 100) + 1;
-    let squadra = {
+     let squadra = {
         nome: curSquadra.nome,
-        falliSubiti: curSquadra.falliSubiti,
-    }
-
+        falliSubiti: curSquadra.falliSubiti
+    };
     squadreNuove.push(squadra);
+    console.log(`La squadra ${squadra.nome} ha subito ${squadra.falliSubiti} falli`);
 }
 
 console.log(squadreNuove);
