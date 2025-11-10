@@ -21,3 +21,21 @@ const squadreCalcio = [
   { nome: "Lazio", puntiFatti: 0, falliSubiti: 0 },
   { nome: "Fiorentina", puntiFatti: 0, falliSubiti: 0 },
 ];
+
+//2. CICLO FOR
+
+let squadreNuove = [];
+ 
+for (let i = 0; i < squadreCalcio.length; i++) {
+    const curSquadra = squadreCalcio[i];
+    curSquadra.puntiFatti = Math.floor(Math.random() * 100) + 1;
+    curSquadra.falliSubiti = Math.floor(Math.random() * 100) + 1;
+    let squadra = {
+        nome: curSquadra.nome,
+        falliSubiti: curSquadra.falliSubiti,
+    }
+
+    squadreNuove.push(squadra);
+}
+
+console.log(squadreNuove);
