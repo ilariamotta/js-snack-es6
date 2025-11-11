@@ -17,7 +17,10 @@ let arrayNumeri = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 
 function nuovoArray(array, a, b) {
     let arrayAggiornato = [];
-    for (let i = a; i <= b; i++) {
+    if (a < 0) {
+        a = 0;
+    }
+    for (let i = a; i <= b && i < array.length; i++ ) {
         arrayAggiornato.push(array[i]);
     }
 
@@ -27,6 +30,6 @@ function nuovoArray(array, a, b) {
 
 //3. invoco la funzione
 
-let risultato = nuovoArray(arrayNumeri, 2, 6);
+let risultato = nuovoArray(arrayNumeri, -2, 10);
 console.log(risultato);
 
